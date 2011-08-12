@@ -491,11 +491,11 @@ class ResourceController(object):
         return True  # USE THIS AS DEFAULT XMLRPC RETURN VALUE
 
     def getrules(self):
-        import shelve
+        # @DET not called by any test code
         self.rules = dbfile.shelve_open(self.name + '.rules')
 
     def getresources(self):
-        import shelve
+        # @DET not called by any test code
         self.resources = dbfile.shelve_open(self.name + '.rsrc')
 
     def setrule(self, rsrc, rule):
